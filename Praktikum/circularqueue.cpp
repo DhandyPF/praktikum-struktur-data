@@ -63,5 +63,9 @@ int main () {
 
     cout << "Uji coba antrian penuh:" << endl;
     enqueue (&antrian, 60);
+
+    // cout << "Alamat front: " << &antrian.front << endl;
+    // cout << "Alamat rear: " << &antrian.rear << endl;
+
     return 0;
 }
