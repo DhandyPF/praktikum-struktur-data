@@ -28,7 +28,7 @@ bool isEmpty(Queue *q) {
 }
 
 void enqueue(Queue *q, int value) {
-    if (isFull(q)) {
+    if(isFull(q)) {
         cout << "Maaf antrian penuh" << endl;
     } else {
         q->data[q->rear] = value;
@@ -40,7 +40,7 @@ void enqueue(Queue *q, int value) {
 }
 
 void dequeue(Queue *q) {
-    if (isEmpty(q)) {
+    if(isEmpty(q)) {
         cout << "Maaf antrian kosong" << endl;
     } else {
         int value = q->data[q->front];
@@ -52,17 +52,19 @@ void dequeue(Queue *q) {
 }
 
 int main () {
-    init (&antrian);
+    init(&antrian);
     cout << "Proses Enqueue:" << endl;
-    enqueue (&antrian, 10);
-    enqueue (&antrian, 20);
-    enqueue (&antrian, 30);
-    enqueue (&antrian, 40);
-    enqueue (&antrian, 50);
-    dequeue (&antrian);
+    enqueue(&antrian, 10);
+    enqueue(&antrian, 20);
+    enqueue(&antrian, 30);
+    enqueue(&antrian, 40);
+    enqueue(&antrian, 50);
+    dequeue(&antrian);
+    dequeue(&antrian);
 
     cout << "Uji coba antrian penuh:" << endl;
-    enqueue (&antrian, 60);
+    enqueue(&antrian, 60);
+    enqueue(&antrian, 70);
 
     // cout << "Alamat front: " << &antrian.front << endl;
     // cout << "Alamat rear: " << &antrian.rear << endl;
