@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+// -- QUEUE --
+
 typedef struct node *address;
 struct node{
     string data;
@@ -53,8 +55,9 @@ void cetak(Queue *q, string nama) {
         } cout << "\n";
     }
 }
+// -- QUEUE --
 
-void tampilkanMenu() {
+void menu() {
     cout << "\n========================================\n";
     cout << "    SISTEM LAYANAN KLINIK SEHAT         \n";
     cout << "========================================\n";
@@ -69,6 +72,7 @@ void tampilkanMenu() {
 
 int main() {
     init(&antrian);
+    menu();
     // enqueue(&antrian, "dimas");
     // cetak(&antrian);
 
