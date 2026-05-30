@@ -54,10 +54,23 @@ void cetak(Queue *q, string nama) {
     }
 }
 
+void tampilkanMenu() {
+    cout << "\n========================================\n";
+    cout << "    SISTEM LAYANAN KLINIK SEHAT         \n";
+    cout << "========================================\n";
+    cout << "1. Daftar Pasien Baru (Antrian)\n";
+    cout << "2. Panggil Pasien Selanjutnya\n";
+    cout << "3. Tampilkan Antrian Pasien Saat Ini\n";
+    cout << "4. Tampilkan Riwayat Pemeriksaan\n";
+    cout << "5. Keluar\n";
+    cout << "========================================\n";
+    cout << "Pilih menu (1-5): ";
+}
+
 int main() {
     init(&antrian);
-    enqueue(&antrian, "dimas");
-    cetak(&antrian);
+    // enqueue(&antrian, "dimas");
+    // cetak(&antrian);
 
     return 0;
 }
