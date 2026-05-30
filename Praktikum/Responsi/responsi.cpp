@@ -55,5 +55,9 @@ void cetak(Queue *q, string nama) {
 }
 
 int main() {
+    init(&antrian);
+    enqueue(&antrian, "dimas");
+    cetak(&antrian);
 
+    return 0;
 }
