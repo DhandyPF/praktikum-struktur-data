@@ -2,6 +2,37 @@
 #include <string>
 using namespace std;
 
+#define MAXSTACK 100
+
+// -- STACK --
+
+typedef struct {
+    int item[MAXSTACK];
+    int count;
+} Stack;
+
+Stack tumpukan;
+
+bool isFull(Stack *x) {
+    if ((x->count) >= MAXSTACK) {
+        return true;
+        return false;
+    }
+}
+
+bool isEmpty(Stack *x) {
+    if ((x->count) == 0) {
+        return true;
+    }
+    return false;
+}
+
+void membuatStack(Stack *x) {
+    x->count = 0;
+}
+
+// -- STACK --
+
 // -- QUEUE --
 
 typedef struct node *address;
@@ -57,6 +88,8 @@ void cetak(Queue *q, string nama) {
 }
 // -- QUEUE --
 
+// -- MENU --
+
 void menu() {
     cout << "\n========================================\n";
     cout << "    SISTEM LAYANAN KLINIK SEHAT         \n";
@@ -69,6 +102,8 @@ void menu() {
     cout << "========================================\n";
     cout << "Pilih menu (1-5): ";
 }
+
+// -- MENU --
 
 int main() {
     init(&antrian);
