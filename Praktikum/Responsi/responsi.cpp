@@ -103,6 +103,7 @@ void enqueue(Queue *q, string nama) {
     } else {
         q->rear->next = databaru;
         q->rear = databaru;
+            cout << "Pasien atas nama \"" << nama << "\" berhasil didaftarkan ke antrian.\n";
     }
 }
 
@@ -123,15 +124,14 @@ string dequeue(Queue *q) {
 void cetakAntrian(Queue *q) {
     if (isEmpty(q)) {
         cout << "Antrian masih kosong.\n";
-    } else {
-        address antri = q->front;
-        int nomor = 1;
-        while (antri != NULL) {
-            cout << nomor << ". "<< antri->data << endl;
-            antri = antri->next;
-            nomor++;
-        } cout << "\n";
     }
+    address antri = q->front;
+    int nomor = 1;
+    while (antri != NULL) {
+        cout << nomor << ". "<< antri->data << endl;
+        antri = antri->next;
+        nomor++;
+    } cout << "\n";
 }
 
 // -- QUEUE --
@@ -139,7 +139,7 @@ void cetakAntrian(Queue *q) {
 // -- MENU --
 
 void menu() {
-    cout << "\n=== SISTEM LAYANAN KLINIK SEHAT ===\n";
+    cout << "=== SISTEM LAYANAN KLINIK SEHAT ===\n";
     cout << "1. Daftar Pasien Baru (Antrian)\n";
     cout << "2. Panggil Pasien Selanjutnya\n";
     cout << "3. Tampilkan Antrian Pasien Saat Ini\n";
