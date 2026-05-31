@@ -15,10 +15,10 @@ typedef struct {
 Stack riwayat;
 
 bool isFull(Stack *x) {
-    if ((x->count) >= MAXSTACK)
+    if ((x->count) >= MAXSTACK) {
         return true;
-        return false;
-
+    }
+    return false;
 }
 
 bool isEmpty(Stack *x) {
@@ -97,41 +97,52 @@ bool isEmpty(Queue *q){
 
 void enqueue(Queue *q, string nama) {
     address databaru = alokasi(nama);
-    if (isEmpty(q)){
+    if (isEmpty(q)) {
         q->front = databaru;
         q->rear = databaru;
     } else {
         q->rear->next = databaru;
         q->rear = databaru;
-            cout << "Pasien atas nama \"" << nama << "\" berhasil didaftarkan ke antrian.\n";
     }
+
+    cout << "Pasien atas nama \"" << nama << "\" berhasil didaftarkan ke antrian.\n";
 }
 
 string dequeue(Queue *q) {
-    if(isEmpty(q)) {
-        cout << "";
+    if (isEmpty(q)) {
+        cout << "Antrian kosong.\n";
+        return "";
     }
+
     address hapus = q->front;
     string nilai = hapus->data;
     q->front = q->front->next;
+    
     if (q->front == NULL) {
         q->rear = NULL;
     }
+
     delete hapus;
     return nilai;
+
 }
 
 void cetakAntrian(Queue *q) {
     if (isEmpty(q)) {
         cout << "Antrian masih kosong.\n";
+        return;
     }
+
     address antri = q->front;
     int nomor = 1;
+
     while (antri != NULL) {
-        cout << nomor << ". "<< antri->data << endl;
+        cout << nomor << ". " << antri->data << endl;
         antri = antri->next;
         nomor++;
-    } cout << "\n";
+    }
+
+    cout << "\n";
 }
 
 // -- QUEUE --
@@ -178,7 +189,7 @@ int main() {
                     cout << "Tidak ada pasien dalam antrian \n";
                 } else {
                     string namaDipanggil = dequeue(&antrian);
-                    cout << "Pasien atas nama " << namaDipanggil << "sedang diperiksa \n";
+                    cout << "Pasien atas nama " << namaDipanggil << " sedang diperiksa \n";
                     push(namaDipanggil, &riwayat);
                     cout << "Data pasien disimpan ke riwayat pemeriksaan.\n";
                 }
