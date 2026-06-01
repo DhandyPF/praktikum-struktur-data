@@ -38,7 +38,6 @@ void push(string data, Stack *x) {
     } else {
         x->item[x->count] = data;
         ++(x->count);
-        cout << "Berhasil dimasukkan ke riwayat \n";
     }
 }
 
@@ -191,7 +190,6 @@ int main() {
                     string namaDipanggil = dequeue(&antrian);
                     cout << "Pasien atas nama " << namaDipanggil << " sedang diperiksa \n";
                     push(namaDipanggil, &riwayat);
-                    cout << "Data pasien disimpan ke riwayat pemeriksaan.\n";
                 }
                 break;
             }
