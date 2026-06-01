@@ -34,7 +34,7 @@ void membuatStack(Stack *x) {
 
 void push(string data, Stack *x) {
     if (isFull(x)) {
-        cout << "Riwayat penuh \n";
+        cout << "Riwayat penuh\n";
     } else {
         x->item[x->count] = data;
         ++(x->count);
@@ -43,10 +43,10 @@ void push(string data, Stack *x) {
 
 void pop(Stack *x) {
     if (isEmpty(x)) {
-        cout << "Tidak ada riwayat \n";
+        cout << "Tidak ada riwayat\n";
     } else {
         --(x->count);
-        cout << "Data \"" << x->item[x->count] << "\" dihapus dari riwayat.\n";
+        cout << "Data \"" << x->item[x->count] << "\" dihapus dari riwayat\n";
     }
 }
 
@@ -58,7 +58,7 @@ void cetakRiwayat(Stack *x) {
     for (int i = x->count - 1; i >= 0; i--) {
         cout << (x->count - i) << ". " << x->item[i] << endl;
     }
-    cout << "Total pasien yang sudah diperiksa : " << x->count << endl;
+    cout << "Pasien yang sudah diperiksa : " << x->count << endl;
 }
 
 // -- STACK --
@@ -104,7 +104,7 @@ void enqueue(Queue *q, string nama) {
         q->rear = databaru;
     }
 
-    cout << "Pasien atas nama \"" << nama << "\" berhasil didaftarkan ke antrian.\n";
+    cout << "Pasien atas nama \"" << nama << "\" berhasil didaftarkan\n";
 }
 
 string dequeue(Queue *q) {
@@ -128,7 +128,7 @@ string dequeue(Queue *q) {
 
 void cetakAntrian(Queue *q) {
     if (isEmpty(q)) {
-        cout << "Antrian masih kosong.\n";
+        cout << "Antrian masih kosong\n";
         return;
     }
 
@@ -206,7 +206,7 @@ int main() {
                 break;
             }
             default: {
-                cout << "Tidak ada dalam pilihan. Silahkan masukkan angka 1 sampai 5.\n" << endl;
+                cout << "Tidak ada dalam pilihan. Silahkan masukkan angka 1 sampai 5\n" << endl;
             }
         }
     } while (pilihan != 5);
