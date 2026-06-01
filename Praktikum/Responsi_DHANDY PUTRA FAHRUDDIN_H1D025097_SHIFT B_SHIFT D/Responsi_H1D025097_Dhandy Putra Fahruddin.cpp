@@ -206,7 +206,7 @@ int main() {
                 break;
             }
             default: {
-                cout << "Tidak ada dalam pilihan. Silahkan masukkan angka 1 sampai 5\n" << endl;
+                cout << "Silahkan masukkan angka 1 sampai 5\n" << endl;
             }
         }
     } while (pilihan != 5);
