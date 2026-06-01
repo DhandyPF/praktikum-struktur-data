@@ -109,7 +109,7 @@ void enqueue(Queue *q, string nama) {
 
 string dequeue(Queue *q) {
     if (isEmpty(q)) {
-        cout << "Antrian kosong.\n";
+        cout << "Antrian masih kosong\n";
         return "";
     }
 
@@ -185,7 +185,7 @@ int main() {
             }
             case 2: {
                 if (isEmpty(&antrian)) {
-                    cout << "Tidak ada pasien dalam antrian \n";
+                    cout << "Antrian masih kosong\n";
                 } else {
                     string namaDipanggil = dequeue(&antrian);
                     cout << "Pasien atas nama " << namaDipanggil << " sedang diperiksa \n";
