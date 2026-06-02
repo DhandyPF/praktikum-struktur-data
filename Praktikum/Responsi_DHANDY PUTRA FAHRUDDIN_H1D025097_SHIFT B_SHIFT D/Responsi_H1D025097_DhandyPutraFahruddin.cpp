@@ -94,7 +94,6 @@ void enqueue(Queue *q, string nama) {
         q->rear->next = databaru;
         q->rear = databaru;
     }
-
     cout << "Pasien atas nama " << nama << " berhasil didaftarkan\n";
 }
 
@@ -103,18 +102,14 @@ string dequeue(Queue *q) {
         cout << "Antrian masih kosong\n";
         return "";
     }
-
-    address hapus = q->front;
-    string nilai = hapus->data;
+    address tmp = q->front;
+    string nilai = tmp->data;
     q->front = q->front->next;
-    
     if (q->front == NULL) {
         q->rear = NULL;
     }
-
-    delete hapus;
+    delete tmp;
     return nilai;
-
 }
 
 void cetakAntrian(Queue *q) {
@@ -122,16 +117,13 @@ void cetakAntrian(Queue *q) {
         cout << "Antrian masih kosong\n";
         return;
     }
-
     address antri = q->front;
     int nomor = 1;
-
     while (antri != NULL) {
         cout << nomor << ". " << antri->data << endl;
         antri = antri->next;
         nomor++;
     }
-
     cout << "\n";
 }
 
