@@ -41,15 +41,6 @@ void push(string data, Stack *x) {
     }
 }
 
-void pop(Stack *x) {
-    if (isEmpty(x)) {
-        cout << "Tidak ada riwayat\n";
-    } else {
-        --(x->count);
-        cout << "Data " << x->item[x->count] << " dihapus dari riwayat\n";
-    }
-}
-
 void cetakRiwayat(Stack *x) {
     if (isEmpty(x)) {
         cout << "Belum ada riwayat pasien\n";
