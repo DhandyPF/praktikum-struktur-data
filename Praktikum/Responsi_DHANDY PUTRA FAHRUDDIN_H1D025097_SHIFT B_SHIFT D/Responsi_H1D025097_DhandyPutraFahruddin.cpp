@@ -46,7 +46,7 @@ void pop(Stack *x) {
         cout << "Tidak ada riwayat\n";
     } else {
         --(x->count);
-        cout << "Data \"" << x->item[x->count] << "\" dihapus dari riwayat\n";
+        cout << "Data " << x->item[x->count] << " dihapus dari riwayat\n";
     }
 }
 
@@ -150,11 +150,12 @@ void cetakAntrian(Queue *q) {
 
 void menu() {
     cout << "=== SISTEM LAYANAN KLINIK SEHAT ===\n";
-    cout << "1. Daftar Pasien Baru (Antrian)\n";
+    cout << "1. Daftar Pasien Baru\n";
     cout << "2. Panggil Pasien Selanjutnya\n";
-    cout << "3. Tampilkan Antrian Pasien Saat Ini\n";
+    cout << "3. Tampilkan Antrian Saat Ini\n";
     cout << "4. Tampilkan Riwayat Pemeriksaan\n";
     cout << "5. Keluar\n";
+    cout << "=== SISTEM LAYANAN KLINIK SEHAT ===\n";
     cout << "Pilih menu (1-5): ";
 }
 
