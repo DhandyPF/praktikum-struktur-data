@@ -151,6 +151,7 @@ int main() {
     int pilihan;
 
     do {
+        cout << "\n";
         menu();
         cin >> pilihan;
         cin.ignore();
