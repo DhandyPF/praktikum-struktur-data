@@ -104,7 +104,7 @@ void enqueue(Queue *q, string nama) {
         q->rear = databaru;
     }
 
-    cout << "Pasien atas nama \"" << nama << "\" berhasil didaftarkan\n";
+    cout << "Pasien atas nama " << nama << " berhasil didaftarkan\n";
 }
 
 string dequeue(Queue *q) {
