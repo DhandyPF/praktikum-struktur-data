@@ -3,7 +3,6 @@
 using namespace std;
 
 #define MAXSTACK 100
-#define MAX_Q 100
 
 // -- STACK --
 
@@ -32,6 +31,8 @@ void membuatStack(Stack *x) {
     x->count = 0;
 }
 
+// -- Fungsi Push --
+
 void push(string data, Stack *x) {
     if (isFull(x)) {
         cout << "Riwayat penuh\n";
@@ -40,6 +41,8 @@ void push(string data, Stack *x) {
         ++(x->count);
     }
 }
+
+// -- Fungsi Push --
 
 void cetakRiwayat(Stack *x) {
     if (isEmpty(x)) {
@@ -85,6 +88,8 @@ bool isEmpty(Queue *q){
     return (q->front == NULL); 
 }
 
+// -- Fungsi Enqueue --
+
 void enqueue(Queue *q, string nama) {
     address databaru = alokasi(nama);
     if (isEmpty(q)) {
@@ -96,6 +101,10 @@ void enqueue(Queue *q, string nama) {
     }
     cout << "Pasien atas nama " << nama << " berhasil didaftarkan\n";
 }
+
+// -- Fungsi Enqueue --
+
+// -- Fungsi Dequeue --
 
 string dequeue(Queue *q) {
     if (isEmpty(q)) {
@@ -111,6 +120,8 @@ string dequeue(Queue *q) {
     delete tmp;
     return nilai;
 }
+
+// -- Fungsi Dequeue --
 
 void cetakAntrian(Queue *q) {
     if (isEmpty(q)) {
@@ -156,6 +167,8 @@ int main() {
         cin >> pilihan;
         cin.ignore();
 
+        // -- Switch --
+
         switch (pilihan) {
             case 1: {
                 string nama;
@@ -194,6 +207,9 @@ int main() {
                 cout << "Silahkan masukkan angka 1 sampai 5\n" << endl;
             }
         }
+
+        // -- Switch --
+
     } while (pilihan != 5);
 
     return 0;
