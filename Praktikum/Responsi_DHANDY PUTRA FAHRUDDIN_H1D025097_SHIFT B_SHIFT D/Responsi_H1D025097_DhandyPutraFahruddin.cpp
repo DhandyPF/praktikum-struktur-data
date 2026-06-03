@@ -31,7 +31,7 @@ void membuatStack(Stack *x) {
     x->count = 0;
 }
 
-// -- Fungsi Push --
+// --- Menambah data ke stack (push) ---
 
 void push(string data, Stack *x) {
     if (isFull(x)) {
@@ -42,7 +42,7 @@ void push(string data, Stack *x) {
     }
 }
 
-// -- Fungsi Push --
+// --- Menambah data ke stack (push) ---
 
 void cetakRiwayat(Stack *x) {
     if (isEmpty(x)) {
@@ -88,7 +88,7 @@ bool isEmpty(Queue *q){
     return (q->front == NULL); 
 }
 
-// -- Fungsi Enqueue --
+// --- Menambah pasien ke antrian (enqueue) ---
 
 void enqueue(Queue *q, string nama) {
     address databaru = alokasi(nama);
@@ -102,9 +102,9 @@ void enqueue(Queue *q, string nama) {
     cout << "Pasien atas nama " << nama << " berhasil didaftarkan\n";
 }
 
-// -- Fungsi Enqueue --
+// --- Menambah pasien ke antrian (enqueue) ---
 
-// -- Fungsi Dequeue --
+// --- Mengambil dan menghapus pasien dari depan antrian (dequeue) ---
 
 string dequeue(Queue *q) {
     if (isEmpty(q)) {
@@ -121,7 +121,7 @@ string dequeue(Queue *q) {
     return nilai;
 }
 
-// -- Fungsi Dequeue --
+// --- Mengambil dan menghapus pasien dari depan antrian (dequeue) ---
 
 void cetakAntrian(Queue *q) {
     if (isEmpty(q)) {
